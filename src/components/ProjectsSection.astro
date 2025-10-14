@@ -1,0 +1,465 @@
+---
+import ColoredText from './ColoredText.astro';
+import Button from './ui/Button.astro';
+
+export interface HeadingType {
+  subtitle: string;
+  title: string;
+  highlight: string;
+  description: string;
+  highlightColor: string;
+}
+export interface ProjectType {
+  id: number;
+  title: string;
+  category: string;
+  image: string;
+  alt: string;
+  description: string;
+  modalDescription: string;
+  technologies: string[];
+  features: string[];
+  projectLink: string;
+  badge?: string;
+  badgeColor: string;
+  borderColor: string;
+  images: string[];
+}
+
+const headingData: HeadingType = {
+  subtitle: '//PORTFOLIO',
+  title: 'Crafted Innovations',
+  highlight: 'Innovations',
+  description: 'Discover a collection of projects that fuse futuristic design, advanced technology, and seamless functionality.',
+  highlightColor: 'neon-cyan',
+};
+const projectsData: ProjectType[] = [
+  {
+    id: 1,
+    title: 'NeuroVerse - VR Medical Training',
+    category: 'web',
+    image: 'img/project1.jpg',
+    alt: 'NeuroVerse Screenshot',
+    description:
+      'Immersive VR platform for neurosurgical training using WebXR and Three.js.',
+    modalDescription:
+      'A groundbreaking VR platform for neurosurgical training, leveraging WebXR and Three.js to create realistic simulations for medical professionals.',
+    technologies: ['React', 'Three.js', 'WebXR'],
+    features: [
+      'Real-time 3D surgical simulations',
+      'Multi-user VR collaboration',
+      'AI-driven feedback system',
+    ],
+    projectLink: '#',
+    badge: 'Featured',
+    badgeColor: 'neon-cyan',
+    borderColor: 'neon-cyan',
+    images: ['/img/thumb1.jpg', '/img/thumb2.jpg', '/img/thumb3.jpg'],
+  },
+  {
+    id: 2,
+    title: 'Synthia - AI Music Composer',
+    category: 'ai',
+    image: 'img/project2.jpg',
+    alt: 'Synthia Screenshot',
+    description:
+      'AI-driven music creation platform for custom tracks based on emotional inputs.',
+    modalDescription:
+      'An AI-powered platform that generates custom music tracks based on user-defined emotional and genre preferences.',
+    technologies: ['React', 'TensorFlow', 'Web Audio API'],
+    features: [
+      'Emotion-based music generation',
+      'Real-time audio processing',
+      'Customizable genre blending',
+    ],
+    projectLink: '#',
+    badge: '',
+    badgeColor: 'neon-cyan',
+    borderColor: 'neon-purple',
+    images: ['/img/thumb1.jpg', '/img/thumb2.jpg', '/img/thumb3.jpg'],
+  },
+  {
+    id: 3,
+    title: 'Quantum Gallery - 3D Art Platform',
+    category: '3d',
+    image: 'img/project3.jpg',
+    alt: 'Quantum Gallery Screenshot',
+    description:
+      'Virtual 3D art gallery for showcasing digital creations in immersive environments.',
+    modalDescription:
+      'A virtual 3D gallery where artists can showcase their digital creations in immersive, interactive environments.',
+    technologies: ['WebGL', 'Three.js', 'Next.js'],
+    features: [
+      '3D gallery navigation',
+      'Interactive art displays',
+      'Multi-user VR support',
+    ],
+    projectLink: '#',
+    badge: '',
+    badgeColor: 'neon-cyan',
+    borderColor: 'neon-cyan',
+    images: ['/img/thumb1.jpg', '/img/thumb2.jpg', '/img/thumb3.jpg'],
+  },
+  {
+    id: 4,
+    title: 'CodeMind - AI Pair Programmer',
+    category: 'ai',
+    image: 'img/project4.jpg',
+    alt: 'CodeMind Screenshot',
+    description:
+      'Advanced AI coding assistant that understands context and suggests optimal solutions.',
+    modalDescription:
+      'An advanced AI coding assistant that understands project context, suggests optimal solutions, and learns from your coding style to become a perfect pair programmer.',
+    technologies: ['Python', 'GPT-4', 'VS Code'],
+    features: [
+      'Context-aware code suggestions',
+      'Real-time error detection',
+      'Automated documentation',
+      'Code optimization recommendations',
+    ],
+    projectLink: '#',
+    badge: 'New',
+    badgeColor: 'neon-cyan',
+    borderColor: 'neon-purple',
+    images: ['/img/thumb1.jpg', '/img/thumb2.jpg', '/img/thumb3.jpg'],
+  },
+  {
+    id: 5,
+    title: 'CyberMart - E-Commerce Platform',
+    category: 'web',
+    image: 'img/project5.jpg',
+    alt: 'CyberMart Screenshot',
+    description:
+      'Next-gen e-commerce with AR product previews and QR Code payments.',
+    modalDescription:
+      'A futuristic e-commerce platform featuring augmented reality product previews, crypto payments, and AI-powered personal shopping assistants.',
+    technologies: ['Next.js', 'Node.js', 'Web3', 'AR.js'],
+    features: [
+      'Augmented Reality product previews',
+      'Crypto and traditional payment options',
+      'AI shopping assistant',
+      '3D product visualization',
+    ],
+    projectLink: '#',
+    badge: '',
+    badgeColor: 'neon-cyan',
+    borderColor: 'neon-cyan',
+    images: ['/img/thumb1.jpg', '/img/thumb2.jpg', '/img/thumb3.jpg'],
+  },
+  {
+    id: 6,
+    title: 'NeonCity - Cyberpunk Metaverse',
+    category: '3d',
+    image: 'img/project6.jpg',
+    alt: 'NeonCity Screenshot',
+    description:
+      'Immersive 3D cyberpunk world with real-time multiplayer interactions.',
+    modalDescription:
+      'A fully immersive cyberpunk metaverse where users can explore, socialize, and conduct business in a persistent 3D world with real-time multiplayer interactions.',
+    technologies: ['Unity', 'C#', 'WebGL', 'Photon'],
+    features: [
+      'Persistent cyberpunk world',
+      'Real-time multiplayer interactions',
+      'VR and desktop support',
+      'Customizable avatars and spaces',
+    ],
+    projectLink: '#',
+    badge: '',
+    badgeColor: 'neon-cyan',
+    borderColor: 'neon-purple',
+    images: ['/img/thumb1.jpg', '/img/thumb2.jpg', '/img/thumb3.jpg'],
+  },
+];
+---
+
+<section id="projects" class="py-24 relative overflow-hidden">
+  <div class="absolute inset-0 cyber-grid opacity-20"></div>
+  <div class="absolute bottom-0 right-0 w-96 h-96 bg-neon-purple/10 rounded-full blur-3xl"></div>
+
+  <div 
+    class="max-w-7xl mx-auto px-4 relative"
+    x-data={`{
+      filter: 'all',
+      activeProject: null,
+      selectedImage: null,
+      projects: ${JSON.stringify(projectsData)},
+      openModal(projectId) {
+        this.activeProject = projectId;
+        const project = this.projects.find(p => p.id === projectId);
+        this.selectedImage = project ? project.image : null;
+        document.body.classList.add('overflow-hidden');
+      },
+      closeModal() {
+        this.activeProject = null;
+        this.selectedImage = null;
+        document.body.classList.remove('overflow-hidden');
+      },
+      filteredProjects() {
+        return this.filter === 'all' 
+          ? this.projects 
+          : this.projects.filter(p => p.category === this.filter);
+      },
+      getProject(id) {
+        return this.projects.find(p => p.id === id);
+      }
+    }`}
+  >
+    <div class="mb-16 text-center">
+      <span class="text-neon-cyan font-code">{headingData.subtitle}</span>
+      <h2 class="text-4xl md:text-5xl font-bold mt-2">
+        <ColoredText text={headingData.title} wordsPerColor={1} />
+      </h2>
+      <div class="h-1 w-24 bg-neon-purple mx-auto mt-4"></div>
+      <p class="text-gray-300 max-w-3xl mx-auto mt-6">{headingData.description}</p>
+    </div>
+
+    <!-- Project Filter -->
+    <div class="flex flex-wrap justify-center gap-4 mb-12">
+      <button
+        x-on:click="filter = 'all'"
+        class="px-5 py-2 max-sm:text-sm max-sm:py-1.5 max-sm:px-4 rounded-full border transition-all duration-300"
+        x-bind:class="{
+          'bg-neon-cyan/20 border-neon-cyan text-neon-cyan': filter === 'all',
+          'border-gray-600 text-gray-400 hover:border-neon-cyan/50 hover:text-neon-cyan/70': filter !== 'all'
+        }"
+      >
+        All
+      </button>
+      <template x-for="category in [...new Set(projects.map(p => p.category))]" :key="category">
+        <button
+          x-on:click="filter = category"
+          class="px-5 py-2 max-sm:text-sm max-sm:py-1.5 max-sm:px-4 rounded-full border transition-all duration-300"
+          x-bind:class="{
+            'bg-neon-cyan/20 border-neon-cyan text-neon-cyan': filter === category,
+            'border-gray-600 text-gray-400 hover:border-neon-cyan/50 hover:text-neon-cyan/70': filter !== category
+          }"
+        >
+          <span class="capitalize" x-text="category"></span>
+        </button>
+      </template>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <template x-for="project in filteredProjects()" :key="project.id">
+        <div
+          x-show="true"
+          x-transition:enter="transition ease-out duration-500"
+          x-transition:enter-start="opacity-0 translate-y-10"
+          x-transition:enter-end="opacity-100 translate-y-0"
+          class="group relative"
+          x-data="{ hover: false }"
+        >
+          <div
+            class="overflow-hidden rounded-lg border bg-dark-space/80 backdrop-blur-md transition-all duration-500 hover:shadow-lg"
+            x-bind:class="`border-${project.borderColor}/30 hover:border-${project.borderColor} hover:shadow-${project.borderColor}/30`"
+            x-on:mouseenter="hover = true"
+            x-on:mouseleave="hover = false"
+          >
+            <div
+              x-on:click="openModal(project.id)"
+              class="relative aspect-video cursor-pointer"
+            >
+              <img
+                :src="project.image"
+                :alt="project.alt"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div
+                x-show="hover"
+                x-transition:enter="transition ease-out duration-300"
+                x-transition:enter-start="opacity-0"
+                x-transition:enter-end="opacity-100"
+                class="absolute inset-0 bg-gradient-to-t from-dark-space via-dark-space/70 to-transparent flex flex-col justify-end p-6"
+              >
+                <h3 class="text-xl font-bold text-neon-cyan mb-2" x-text="project.title"></h3>
+                <p class="text-gray-300 mb-4 text-sm" x-text="project.description"></p>
+                <div class="flex flex-wrap gap-2">
+                  <template x-for="tech in project.technologies" :key="tech">
+                    <span
+                      class="text-xs px-2 py-1 rounded-full border"
+                      x-bind:class="`bg-${project.badgeColor}/20 text-${project.badgeColor} border-${project.badgeColor}/50`"
+                      x-text="tech"
+                    ></span>
+                  </template>
+                </div>
+              </div>
+              <div
+                x-show="project.badge"
+                class="absolute top-4 right-4 bg-dark-space/90 rounded-full px-3 py-1 text-xs border border-neon-cyan text-neon-cyan"
+                x-text="project.badge"
+              ></div>
+            </div>
+          </div>
+          <div class="flex justify-between mt-4">
+            <a
+              :href="project.projectLink"
+              target="_blank"
+              class="transition-colors duration-300 text-sm font-bold flex items-center hover:opacity-80"
+              x-bind:class="`text-${project.borderColor}`"
+            >
+              View Project
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4 ml-1"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </a>
+            <button
+              x-on:click="openModal(project.id)"
+              class="text-gray-400 hover:text-neon-purple transition-colors duration-300 text-sm font-bold flex items-center"
+            >
+              Details
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4 ml-1"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2h-1V9a1 1 0 00-1-1H9z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </template>
+    </div>
+
+    <!-- Project Modal -->
+    <div
+      x-show="activeProject !== null"
+      x-cloak
+      class="fixed inset-0 z-50 overflow-y-auto"
+      aria-labelledby="modal-title"
+      role="dialog"
+      aria-modal="true"
+      style="display:none;"
+    >
+      <div class="flex items-center justify-center min-h-screen px-4 text-center sm:p-0">
+        <div
+          x-on:click="closeModal()"
+          x-show="activeProject !== null"
+          x-transition:enter="ease-out duration-300"
+          x-transition:enter-start="opacity-0"
+          x-transition:enter-end="opacity-100"
+          x-transition:leave="ease-in duration-200"
+          x-transition:leave-start="opacity-100"
+          x-transition:leave-end="opacity-0"
+          class="fixed inset-0 bg-dark-space/80 transition-opacity"
+          aria-hidden="true"
+        ></div>
+        <div
+          x-show="activeProject !== null"
+          x-transition:enter="ease-out duration-300"
+          x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+          x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
+          x-transition:leave="ease-in duration-200"
+          x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100"
+          x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+          class="inline-block w-full max-w-[98%] sm:max-w-4xl my-8 rounded-lg text-left overflow-hidden transform transition-all backdrop-blur-xl border border-neon-cyan/30"
+        >
+          <div class="relative bg-dark-space/95 px-4 sm:px-6 pt-5 pb-4 sm:pb-6 max-h-[90vh] overflow-y-auto scrollbars">
+            <div class="relative" x-data="currentProject = getProject(activeProject)">
+              <div class="mt-3 sm:mt-0 text-left w-full">
+                <template x-if="currentProject = getProject(activeProject)">
+                  <div>
+                    <h3 
+                      class="text-xl sm:text-2xl font-bold mb-4"
+                      x-bind:class="`text-${currentProject.borderColor}`"
+                      x-text="currentProject.title"
+                    ></h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+                      <div>
+                        <img
+                          :src="selectedImage || currentProject.image"
+                          :alt="currentProject.alt"
+                          class="rounded-lg border w-full h-auto object-cover"
+                          x-bind:class="`border-${currentProject.borderColor}/30`"
+                        />
+                        <div class="grid grid-cols-4 gap-2 sm:gap-3 mt-4">
+                          <img
+                            x-on:click="selectedImage = currentProject.image"
+                            :src="currentProject.image"
+                            alt="Default Screenshot"
+                            class="rounded border w-full h-auto object-cover cursor-pointer hover:opacity-80 transition-opacity duration-200"
+                            x-bind:class="`border-${currentProject.borderColor}/30`"
+                          />
+                          <template x-for="(thumb, index) in currentProject.images" :key="index">
+                            <img
+                              x-on:click="selectedImage = thumb"
+                              :src="thumb"
+                              :alt="`Screenshot ${index + 1}`"
+                              class="rounded border w-full h-auto object-cover cursor-pointer hover:opacity-80 transition-opacity duration-200"
+                              x-bind:class="`border-${currentProject.borderColor}/30`"
+                            />
+                          </template>
+                        </div>
+                      </div>
+                      <div class="space-y-4 sm:space-y-6">
+                        <p class="text-gray-300 text-sm sm:text-base" x-text="currentProject.modalDescription"></p>
+                        <div class="space-y-2">
+                          <h4 class="text-neon-purple font-bold text-base sm:text-lg">Technologies</h4>
+                          <div class="flex flex-wrap gap-2">
+                            <template x-for="tech in currentProject.technologies" :key="tech">
+                              <span
+                                class="text-xs px-2 py-1 rounded-full border"
+                                x-bind:class="`bg-${currentProject.badgeColor}/20 text-${currentProject.badgeColor} border-${currentProject.badgeColor}/50`"
+                                x-text="tech"
+                              ></span>
+                            </template>
+                          </div>
+                        </div>
+                        <div>
+                          <h4 class="text-neon-purple font-bold text-base sm:text-lg">Features</h4>
+                          <ul class="text-gray-300 list-disc list-inside text-sm sm:text-base">
+                            <template x-for="feature in currentProject.features" :key="feature">
+                              <li x-text="feature"></li>
+                            </template>
+                          </ul>
+                        </div>
+                        <a
+                          :href="currentProject.projectLink"
+                          target="_blank"
+                          class="inline-block px-4 py-1.5 rounded transition duration-300 text-sm sm:text-base border"
+                          x-bind:class="`bg-${currentProject.badgeColor}/20 text-${currentProject.badgeColor} border-${currentProject.badgeColor} hover:bg-${currentProject.badgeColor}/30`"
+                        >
+                          Visit Project
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </template>
+              </div>
+              <!-- Close Button -->
+              <div class="absolute -end-4 -top-4">
+                <button
+                  x-on:click="closeModal()"
+                  class="size-8 text-sm flex items-center justify-center bg-dark-space border border-neon-purple text-neon-purple hover:bg-neon-purple/10 rounded-full transition duration-300"
+                >
+                  ✕
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Load More Button -->
+    <div class="text-center mt-12">
+      <Button variant='outline' color='cyan'>
+        LOAD MORE PROJECTS
+      </Button>
+    </div>
+  </div>
+</section>

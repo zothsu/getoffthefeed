@@ -1,0 +1,53 @@
+---
+interface Props {
+  image: string;
+  name: string;
+  title: string;
+  class?: string;
+}
+
+const { image, name, title, class: className } = Astro.props;
+---
+
+<div
+  class:list={[
+    'cyber-border rounded-lg p-1 bg-dark-space/80 backdrop-blur-md',
+    className,
+  ]}
+>
+  <div
+    class="h-96 w-full bg-gradient-to-br from-dark-space via-dark-space to-neon-purple/20 rounded overflow-hidden relative"
+  >
+    <!-- Pulse -->
+    <div
+      class="absolute top-4 right-4 h-2 w-2 bg-neon-cyan rounded-full animate-pulse"
+    ></div>
+    <div
+      class="absolute bottom-4 left-4 h-2 w-2 bg-neon-purple rounded-full animate-pulse"
+      style="animation-delay: 0.5s"
+    ></div>
+
+    <!-- Code snippets background -->
+    <div class="absolute inset-0 opacity-30">
+    </div>
+
+    <!-- Profile -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <div class="text-center">
+        <div
+          class="w-32 h-32 mx-auto rounded-full border-2 border-neon-cyan mb-4 overflow-hidden"
+        >
+          <img
+            src={image}
+            alt={name}
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="text-neon-cyan font-code text-xl uppercase">
+          {name}
+        </div>
+        <div class="text-gray-200">{title}</div>
+      </div>
+    </div>
+  </div>
+</div>
