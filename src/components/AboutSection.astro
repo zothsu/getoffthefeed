@@ -1,7 +1,7 @@
 ---
-import ColoredText from './ColoredText.astro';
-import Button from './ui/Button.astro';
-import ProgressBar from './ui/ProgressBar.astro';
+import ColoredText from "./ColoredText.astro";
+import Button from "./ui/Button.astro";
+import ProgressBar from "./ui/ProgressBar.astro";
 
 export interface AboutType {
   label?: string;
@@ -10,29 +10,31 @@ export interface AboutType {
   image: string;
   downloadLink: string;
   stats: { value: string; label: string; borderColor: string }[];
-  skills: { name: string; percentage: number }[];
+  // skills: { name: string; percentage: number }[];
   description: string[];
 }
 
 const aboutData: AboutType = {
-  label: 'About',
-  title: 'DevOps-Focused Problem Solver',
-  subtitle: 'Human-Centered Automation & Web Engineering',
-  image: '/img/about.jpg',
-  downloadLink: '/files/resume.pdf',
+  label: "About",
+  title: "DevOps-Focused Problem Solver",
+  subtitle: "Human-Centered Automation & Web Engineering",
+  image: "/img/about.jpeg",
+  downloadLink: "/files/resume.pdf",
   stats: [
-    { value: '12+', label: 'Years shipping', borderColor: 'neon-purple' },
-    { value: '60+', label: 'Launches guided', borderColor: 'neon-cyan' },
+    { value: "7", label: "CI/CD Pipelines", borderColor: "neon-purple" },
+    { value: "6+", label: "Years in tech", borderColor: "neon-cyan" },
   ],
-  skills: [
-    { name: 'Accessible Frontend Architecture', percentage: 95 },
-    { name: 'Automation & CI/CD', percentage: 92 },
-    { name: 'Site Reliability & Observability', percentage: 90 },
-    { name: 'Team Enablement & Mentoring', percentage: 88 },
-  ],
+  // skills: [
+  //   { name: "Accessible Frontend Architecture", percentage: 95 },
+  //   { name: "Automation & CI/CD", percentage: 92 },
+  //   { name: "Site Reliability & Observability", percentage: 90 },
+  //   { name: "Team Enablement & Mentoring", percentage: 88 },
+  // ],
   description: [
-    'I’m Z-theDev Young, a DevOps-shaped web developer pairing resilient automation with inclusive, fast user interfaces. My background spans product engineering, platform operations, and developer advocacy, so I see the whole system: build pipelines, runtime health, and the humans shipping features.',
-    'I help teams replace brittle release rituals with ergonomic workflows. From codifying infrastructure and telemetry to crafting accessible Astro & Tailwind frontends, I partner with product and ops groups to move faster while keeping trust, empathy, and maintainability at the center.',
+    "I'm Z, a full-stack web developer and open-source advocate based in the Pacific Northwest. I build clean, secure, and accessible websites for small businesses and creators who want control over their digital tools, not another subscription.",
+    "I design fast, static sites powered by frameworks like Astro and Hugo, automate deployment with Docker and GitHub Actions, and fine-tune hosting stacks with Caddy, Traefik, and Linux servers. I also maintain self-hosted services for privacy-minded workflows — from password managers and media servers to custom dashboards and contact sync tools.",
+    "Before diving into development full-time, I spent nearly a decade working in healthcare, where reliability and data security weren't optional — they were law. That experience shaped how I approach technology today: with empathy for users, an insistence on privacy and accessibility, and a deep respect for the systems that safeguard sensitive information. I believe good technology should empower people — not overwhelm them.",
+    "When I'm not deep in a terminal window, you'll find me sharpening knives, reading vintage sci-fi, tinkering with my home server at home, or backpacking through the forests of the Pacific Northwest.",
   ],
 };
 ---
@@ -41,11 +43,13 @@ const aboutData: AboutType = {
   <div class="absolute inset-0 cyber-grid opacity-20"></div>
   <div
     class="absolute top-0 right-0 w-96 h-96 bg-neon-purple/10 rounded-full blur-3xl"
-  ></div>
+  >
+  </div>
 
   <div class="max-w-7xl mx-auto px-4 relative">
     <div class="mb-16 text-center">
-      <span class="text-neon-cyan font-code uppercase">//{aboutData.label}</span>
+      <span class="text-neon-cyan font-code uppercase">//{aboutData.label}</span
+      >
       <h2 class="text-4xl md:text-5xl font-bold mt-2">
         <ColoredText text={aboutData.title} />
       </h2>
@@ -65,31 +69,41 @@ const aboutData: AboutType = {
             />
           </div>
 
-          {aboutData.stats.map((stat, index) => (
-            <div
-              class={`absolute ${index === 0 ? 'top-0 right-1 md:right-0' : 'bottom-0 left-1 md:left-0'} bg-dark-space p-4 border rounded-lg shadow-lg ${stat.borderColor === 'neon-cyan' ? 'border-neon-cyan' : 'border-neon-purple'}`}
-            >
-              <div class={`${stat.borderColor === 'neon-cyan' ? 'text-neon-cyan' : 'text-neon-purple'} text-4xl font-bold`}>
-                {stat.value}
+          {
+            aboutData.stats.map((stat, index) => (
+              <div
+                class={`absolute ${index === 0 ? "top-0 right-1 md:right-0" : "bottom-0 left-1 md:left-0"} bg-dark-space p-4 border rounded-lg shadow-lg ${stat.borderColor === "neon-cyan" ? "border-neon-cyan" : "border-neon-purple"}`}
+              >
+                <div
+                  class={`${stat.borderColor === "neon-cyan" ? "text-neon-cyan" : "text-neon-purple"} text-4xl font-bold`}
+                >
+                  {stat.value}
+                </div>
+                <div class="text-gray-400 text-sm">{stat.label}</div>
               </div>
-              <div class="text-gray-400 text-sm">{stat.label}</div>
-            </div>
-          ))}
+            ))
+          }
         </div>
       </div>
 
       <div class="space-y-6">
-        <h3 class="text-2xl font-bold"><ColoredText text={aboutData.subtitle} /></h3>
-        {aboutData.description.map((para) => (
-          <p class="text-gray-300">{para}</p>
-        ))}
-        <div class="space-y-4 pt-4">
-          {aboutData.skills.map((skill) => (
-            <ProgressBar name={skill.name} percentage={skill.percentage} />
-          ))}
-        </div>
+        <h3 class="text-2xl font-bold">
+          <ColoredText text={aboutData.subtitle} />
+        </h3>
+        {
+          aboutData.description.map((para) => (
+            <p class="text-gray-300">{para}</p>
+          ))
+        }
+        <!-- <div class="space-y-4 pt-4">
+          {
+            aboutData.skills.map((skill) => (
+              <ProgressBar name={skill.name} percentage={skill.percentage} />
+            ))
+          }
+        </div> -->
         <div class="pt-4">
-          <Button 
+          <Button
             variant="outline"
             color="cyan"
             link={true}
@@ -97,21 +111,21 @@ const aboutData: AboutType = {
             href={aboutData.downloadLink}
           >
             Download Resume
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                class="bi bi-download"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"
-                />
-                <path
-                  d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"
-                />
-              </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-download"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"
+              ></path>
+              <path
+                d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"
+              ></path>
+            </svg>
           </Button>
         </div>
       </div>
