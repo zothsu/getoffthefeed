@@ -32,7 +32,7 @@ export const blogItems: BlogItem[] = [
     date: "Oct 10, 2025",
     title: "Why Developers Should Think Like Operators",
     description:
-      "Bridging the gap between development and operations isn’t just about tools — it’s about mindset. Here’s why every developer benefits from thinking like an operator.",
+      "Bridging the gap between development and operations isn't just about tools — it's about mindset. Here's why every developer benefits from thinking like an operator.",
     href: "/blogs/why-developers-should-think-like-operators",
     color: "emerald-green",
     readTime: "6 min read",
@@ -44,17 +44,17 @@ export const blogItems: BlogItem[] = [
 
       <ul>
         <li><strong>Build with Production in Mind</strong>: Logging, metrics, and observability should never be afterthoughts.</li>
-        <li><strong>Automate Everything You Can</strong>: Consistency is reliability — CI/CD isn’t optional anymore.</li>
+        <li><strong>Automate Everything You Can</strong>: Consistency is reliability — CI/CD isn't optional anymore.</li>
         <li><strong>Respect the Ops</strong>: Understanding infrastructure makes you a better problem-solver, not just a better coder.</li>
       </ul>
 
       <h3>Learning from the Command Line</h3>
-      <p>When you touch servers directly, when you break something and fix it yourself, you learn faster than any tutorial can teach you. That’s where real growth happens. Tools like Docker, Caddy, and Tailscale have made local DevOps accessible for indie developers and small teams — no corporate cloud needed.</p>
+      <p>When you touch servers directly, when you break something and fix it yourself, you learn faster than any tutorial can teach you. That's where real growth happens. Tools like Docker, Caddy, and Tailscale have made local DevOps accessible for indie developers and small teams — no corporate cloud needed.</p>
 
       <blockquote>"DevOps isn't a role — it's a conversation between the people who build and the people who keep things running." — Z Sullivan</blockquote>
 
       <h2>The Human Element</h2>
-      <p>DevOps is less about YAML files and more about how teams communicate. We build trust by sharing context, documenting clearly, and assuming good intent. The goal isn’t just uptime — it’s sustainability.</p>
+      <p>DevOps is less about YAML files and more about how teams communicate. We build trust by sharing context, documenting clearly, and assuming good intent. The goal isn't just uptime — it's sustainability.</p>
 
       <h3>Looking Ahead</h3>
       <p>The future of DevOps belongs to generalists who understand both systems and people. As automation grows, empathy and clarity will be the true force multipliers. Build, observe, iterate — and always leave your systems cleaner than you found them.</p>
@@ -65,7 +65,7 @@ export const blogItems: BlogItem[] = [
       name: "Z Sullivan",
       role: "DevOps-shaped Full Stack Web Developer",
       bio: "Z is a full stack web developer and open-source advocate based in the Pacific Northwest. They specialize in building secure, lightweight systems with Docker and static-first frameworks. When not working, Z loves helping small teams bring DevOps principles into their workflows.",
-      image: "/img/male1.jpg",
+      image: "https://res.cloudinary.com/dzuh8njoq/image/upload/v1760917163/signal-pofile_haxwrf.webp",
       alt: "Z Sullivan",
     },
     relatedArticles: [{ id: "docker" }, { id: "self-hosting" }],
@@ -109,7 +109,7 @@ export const blogItems: BlogItem[] = [
       name: "Z Sullivan",
       role: "DevOps-shaped Full Stack Web Developer",
       bio: "Z is a full stack web developer and open-source advocate based in the Pacific Northwest. They specialize in building secure, lightweight systems with Docker and static-first frameworks. When not working, Z loves helping small teams bring DevOps principles into their workflows.",
-      image: "/img/male1.jpg",
+      image: "https://res.cloudinary.com/dzuh8njoq/image/upload/v1760917163/signal-pofile_haxwrf.webp",
       alt: "Z Sullivan",
     },
     relatedArticles: [{ id: "serverless" }, { id: "microservices" }],
@@ -153,7 +153,7 @@ export const blogItems: BlogItem[] = [
       name: "Z Sullivan",
       role: "DevOps-shaped Full Stack Web Developer",
       bio: "Z is a full stack web developer and open-source advocate based in the Pacific Northwest. They specialize in building secure, lightweight systems with Docker and static-first frameworks. When not working, Z loves helping small teams bring DevOps principles into their workflows.",
-      image: "/img/male1.jpg",
+      image: "https://res.cloudinary.com/dzuh8njoq/image/upload/v1760917163/signal-pofile_haxwrf.webp",
       alt: "Z Sullivan",
     },
     relatedArticles: [{ id: "ai" }, { id: "microservices" }],
@@ -188,7 +188,7 @@ export const blogItems: BlogItem[] = [
       name: "Z Sullivan",
       role: "DevOps-shaped Full Stack Web Developer",
       bio: "Z is a full stack web developer and open-source advocate based in the Pacific Northwest. They specialize in building secure, lightweight systems with Docker and static-first frameworks. When not working, Z loves helping small teams bring DevOps principles into their workflows.",
-      image: "/img/male1.jpg",
+      image: "https://res.cloudinary.com/dzuh8njoq/image/upload/v1760917163/signal-pofile_haxwrf.webp",
       alt: "Z Sullivan",
     },
     relatedArticles: [{ id: "ai" }, { id: "ar" }],
@@ -229,7 +229,7 @@ export const blogItems: BlogItem[] = [
       name: "Z Sullivan",
       role: "DevOps-shaped Full Stack Web Developer",
       bio: "Z is a full stack web developer and open-source advocate based in the Pacific Northwest. They specialize in building secure, lightweight systems with Docker and static-first frameworks. When not working, Z loves helping small teams bring DevOps principles into their workflows.",
-      image: "/img/male1.jpg",
+      image: "https://res.cloudinary.com/dzuh8njoq/image/upload/v1760917163/signal-pofile_haxwrf.webp",
       alt: "Z Sullivan",
     },
     relatedArticles: [{ id: "serverless" }, { id: "3d" }],
@@ -263,7 +263,7 @@ export const blogItems: BlogItem[] = [
       name: "Z Sullivan",
       role: "DevOps-shaped Full Stack Web Developer",
       bio: "Z is a full stack web developer and open-source advocate based in the Pacific Northwest. They specialize in building secure, lightweight systems with Docker and static-first frameworks. When not working, Z loves helping small teams bring DevOps principles into their workflows.",
-      image: "/img/male1.jpg",
+      image: "https://res.cloudinary.com/dzuh8njoq/image/upload/v1760917163/signal-pofile_haxwrf.webp",
       alt: "Z Sullivan",
     },
     relatedArticles: [{ id: "serverless" }, { id: "ai" }],
