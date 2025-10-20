@@ -1,6 +1,6 @@
 ---
-import ColoredText from './ColoredText.astro';
-import Button from './ui/Button.astro';
+import ColoredText from "./ColoredText.astro";
+import Button from "./ui/Button.astro";
 
 export interface HeadingType {
   subtitle: string;
@@ -27,156 +27,187 @@ export interface ProjectType {
 }
 
 const headingData: HeadingType = {
-  subtitle: '//PORTFOLIO',
-  title: 'Crafted Innovations',
-  highlight: 'Innovations',
-  description: 'Discover a collection of projects that fuse futuristic design, advanced technology, and seamless functionality.',
-  highlightColor: 'neon-cyan',
+  subtitle: "//PORTFOLIO",
+  title: "Human Centered Design",
+  highlight: "Design",
+  description:
+    "A showcase of open-source, accessible, and thoughtfully engineered projects — from static sites and web apps to full DevOps stacks.",
+  highlightColor: "neon-cyan",
 };
 const projectsData: ProjectType[] = [
   {
     id: 1,
-    title: 'NeuroVerse - VR Medical Training',
-    category: 'web',
-    image: 'img/project1.jpg',
-    alt: 'NeuroVerse Screenshot',
+    title: "PNW Web Solutions",
+    category: "Static Website",
+    image:
+      "https://res.cloudinary.com/dzuh8njoq/image/upload/v1760981010/Screenshot_2025-10-20_at_10.16.12_AM_kyta7m.png",
+    alt: "PNW Web Solutions Screenshot",
     description:
-      'Immersive VR platform for neurosurgical training using WebXR and Three.js.',
+      "A digital agency providing open-source web solutions for small businesses across the Pacific Northwest.",
     modalDescription:
-      'A groundbreaking VR platform for neurosurgical training, leveraging WebXR and Three.js to create realistic simulations for medical professionals.',
-    technologies: ['React', 'Three.js', 'WebXR'],
+      "My primary business site showcasing service packages, contact forms, and links to client work. Built with Astro and Tailwind for speed and accessibility.",
+    technologies: ["Astro", "Tailwind", "CI/CD"],
     features: [
-      'Real-time 3D surgical simulations',
-      'Multi-user VR collaboration',
-      'AI-driven feedback system',
+      "Accessible design system",
+      "Automated CI/CD with SSH deploys",
+      "Custom email and analytics integrations",
     ],
-    projectLink: '#',
-    badge: 'Featured',
-    badgeColor: 'neon-cyan',
-    borderColor: 'neon-cyan',
-    images: ['/img/thumb1.jpg', '/img/thumb2.jpg', '/img/thumb3.jpg'],
+    projectLink: "https://pnwdigitalsolutions.org",
+    badge: "Featured",
+    badgeColor: "neon-cyan",
+    borderColor: "neon-cyan",
+    images: [
+      "https://res.cloudinary.com/dzuh8njoq/image/upload/v1760980727/Screenshot_2025-10-20_at_10.18.07_AM_xweg4f.png",
+      "https://res.cloudinary.com/dzuh8njoq/image/upload/v1760980790/Screenshot_2025-10-20_at_10.19.34_AM_ru8sl0.png",
+    ],
   },
   {
     id: 2,
-    title: 'Synthia - AI Music Composer',
-    category: 'ai',
-    image: 'img/project2.jpg',
-    alt: 'Synthia Screenshot',
-    description:
-      'AI-driven music creation platform for custom tracks based on emotional inputs.',
-    modalDescription:
-      'An AI-powered platform that generates custom music tracks based on user-defined emotional and genre preferences.',
-    technologies: ['React', 'TensorFlow', 'Web Audio API'],
+    title: "Cake Moments with Zoe",
+    category: "Static Website",
+    image:
+      "https://res.cloudinary.com/dzuh8njoq/image/upload/v1760917161/baker-adding-final-touches-strawberry-cake-with-dusting-cocoa-powder_198067-231123_g8nhcg.jpg",
+    alt: " ",
+    description: " ",
+    modalDescription: " ",
+    technologies: ["Hostinger", "Responsive"],
     features: [
-      'Emotion-based music generation',
-      'Real-time audio processing',
-      'Customizable genre blending',
+      "Accessible and responsive design system",
+      "Custom email and analytics integrations",
     ],
-    projectLink: '#',
-    badge: '',
-    badgeColor: 'neon-cyan',
-    borderColor: 'neon-purple',
-    images: ['/img/thumb1.jpg', '/img/thumb2.jpg', '/img/thumb3.jpg'],
+    projectLink: "https://cakemoments.art/",
+    badge: "",
+    badgeColor: "neon-cyan",
+    borderColor: "neon-purple",
+    images: [
+      "https://res.cloudinary.com/dzuh8njoq/image/upload/v1760917398/cake_ntotzf.png",
+    ],
   },
   {
     id: 3,
-    title: 'Quantum Gallery - 3D Art Platform',
-    category: '3d',
-    image: 'img/project3.jpg',
-    alt: 'Quantum Gallery Screenshot',
-    description:
-      'Virtual 3D art gallery for showcasing digital creations in immersive environments.',
-    modalDescription:
-      'A virtual 3D gallery where artists can showcase their digital creations in immersive, interactive environments.',
-    technologies: ['WebGL', 'Three.js', 'Next.js'],
-    features: [
-      '3D gallery navigation',
-      'Interactive art displays',
-      'Multi-user VR support',
-    ],
-    projectLink: '#',
-    badge: '',
-    badgeColor: 'neon-cyan',
-    borderColor: 'neon-cyan',
-    images: ['/img/thumb1.jpg', '/img/thumb2.jpg', '/img/thumb3.jpg'],
+    title: "Emilie Young, Doula",
+    category: "Static Website",
+    image:
+      "https://res.cloudinary.com/dzuh8njoq/image/upload/v1760917377/emDoula_iu3sxy.png",
+    alt: "Screenshot of Adding review to campground",
+    description: "",
+    modalDescription: "Portfolio website for Portland, OR Doula - Emilie Young",
+    technologies: ["Hugo", "CI/CD Pipeline", "Node.js", "Cloudinary"],
+    features: ["Theme Switcher", "Neurodivergent-friendly UI design"],
+    projectLink: "hhttps://github.com/zothsu/emilieYoung",
+    badge: "",
+    badgeColor: "neon-cyan",
+    borderColor: "neon-cyan",
+    images: [],
   },
   {
     id: 4,
-    title: 'CodeMind - AI Pair Programmer',
-    category: 'ai',
-    image: 'img/project4.jpg',
-    alt: 'CodeMind Screenshot',
-    description:
-      'Advanced AI coding assistant that understands context and suggests optimal solutions.',
+    title: "InspireMe Home Decor",
+    category: "CRUD Web App",
+    image:
+      "https://res.cloudinary.com/dzuh8njoq/image/upload/v1760976966/1_1_rjqdu8.png",
+    alt: "Favicon of InspireMe Home Decor",
+    description: "",
     modalDescription:
-      'An advanced AI coding assistant that understands project context, suggests optimal solutions, and learns from your coding style to become a perfect pair programmer.',
-    technologies: ['Python', 'GPT-4', 'VS Code'],
+      "Platform serves as a collaborative space where users passionate about home decor come together to share and discover budget-friendly alternatives.",
+    technologies: ["Django", "Python", "SQLite"],
     features: [
-      'Context-aware code suggestions',
-      'Real-time error detection',
-      'Automated documentation',
-      'Code optimization recommendations',
+      "User post submissions",
+      "Search and filtering by category",
+      "Community collaboration features",
     ],
-    projectLink: '#',
-    badge: 'New',
-    badgeColor: 'neon-cyan',
-    borderColor: 'neon-purple',
-    images: ['/img/thumb1.jpg', '/img/thumb2.jpg', '/img/thumb3.jpg'],
+    projectLink: "https://github.com/zothsu/inspireme",
+    badge: "",
+    badgeColor: "neon-cyan",
+    borderColor: "neon-purple",
+    images: [
+      "https://res.cloudinary.com/dzuh8njoq/image/upload/v1760983780/inspireme-1_sg89iz.png",
+      "https://res.cloudinary.com/dzuh8njoq/image/upload/v1760983781/inspireme-2_qqomep.png",
+    ],
   },
   {
     id: 5,
-    title: 'CyberMart - E-Commerce Platform',
-    category: 'web',
-    image: 'img/project5.jpg',
-    alt: 'CyberMart Screenshot',
-    description:
-      'Next-gen e-commerce with AR product previews and QR Code payments.',
+    title: "NeuroSpicy Camper",
+    category: "CRUD Web App",
+    image:
+      "https://res.cloudinary.com/dzuh8njoq/image/upload/v1760977029/addNote_d71jlw.png",
+    alt: "Screenshot of Adding review to campground",
+    description: "",
     modalDescription:
-      'A futuristic e-commerce platform featuring augmented reality product previews, crypto payments, and AI-powered personal shopping assistants.',
-    technologies: ['Next.js', 'Node.js', 'Web3', 'AR.js'],
+      "MEN stack web app designed for neurodivergent campers to log site attributes like sound, crowd density, and accessibility.",
+    technologies: ["MongoDB", "Express", "Node.js", "EJS"],
     features: [
-      'Augmented Reality product previews',
-      'Crypto and traditional payment options',
-      'AI shopping assistant',
-      '3D product visualization',
+      "Custom user log entries",
+      "Filtering and search functionality",
+      "Neurodivergent-friendly UI design",
     ],
-    projectLink: '#',
-    badge: '',
-    badgeColor: 'neon-cyan',
-    borderColor: 'neon-cyan',
-    images: ['/img/thumb1.jpg', '/img/thumb2.jpg', '/img/thumb3.jpg'],
+    projectLink: "https://github.com/zothsu/theNeuroSpicyCamper",
+    badge: "",
+    badgeColor: "neon-cyan",
+    borderColor: "neon-cyan",
+    images: [
+      "https://res.cloudinary.com/dzuh8njoq/image/upload/v1760977035/ERD_epfmod.png",
+      "https://res.cloudinary.com/dzuh8njoq/image/upload/v1760977033/favicon_iogdrd.ico",
+    ],
   },
+  // {
+  //   id: 6,
+  //   title: "Sharpening Tracker",
+  //   category: "CRUD Web App",
+  //   image:
+  //     "https://res.cloudinary.com/dzuh8njoq/image/upload/v1760980195/knifeSharpening2_v3dexj.png",
+  //   alt: "NeonCity Screenshot",
+  //   description: "",
+  //   modalDescription:
+  //     "A MERN stack CRUD app that tracks knife sharpening sessions, stones used, and next maintenance reminders.",
+  //   technologies: ["MongoDB", "React", "Mongoose ODM", "EJS", "Node"],
+  //   features: [
+  //     "CRUD interface for maintenance logs",
+  //     "Timestamp tracking per session",
+  //     "Responsive and mobile-friendly layout",
+  //   ],
+  //   projectLink: "https://github.com/zothsu/sharpeningTracker",
+  //   badge: "",
+  //   badgeColor: "neon-cyan",
+  //   borderColor: "neon-purple",
+  //   images: [
+  //     "https://res.cloudinary.com/dzuh8njoq/image/upload/v1760980139/knifeSharpening3_uwb1sz.png",
+  //     "https://res.cloudinary.com/dzuh8njoq/image/upload/v1760980141/knifeSharpening1_ihi3un.png",
+  //   ],
+  // },
   {
-    id: 6,
-    title: 'NeonCity - Cyberpunk Metaverse',
-    category: '3d',
-    image: 'img/project6.jpg',
-    alt: 'NeonCity Screenshot',
-    description:
-      'Immersive 3D cyberpunk world with real-time multiplayer interactions.',
+    id: 7,
+    title: "PeterConlin.com",
+    category: "Static Website",
+    image:
+      "https://res.cloudinary.com/dzuh8njoq/image/upload/v1760917400/peterConlin_gx9v2c.png",
+    alt: "Synthia Screenshot",
+    description: "",
     modalDescription:
-      'A fully immersive cyberpunk metaverse where users can explore, socialize, and conduct business in a persistent 3D world with real-time multiplayer interactions.',
-    technologies: ['Unity', 'C#', 'WebGL', 'Photon'],
+      "A showcase of Peter Conlin's work in cinematic design, game development, and environment art. The site features high-fidelity cinematic, immersive game environments, and storytelling-driven projects, reflecting his expertise in interactive narratives and visual design.",
+    technologies: ["Hostinger", "TensorFlow", "Web Audio API"],
     features: [
-      'Persistent cyberpunk world',
-      'Real-time multiplayer interactions',
-      'VR and desktop support',
-      'Customizable avatars and spaces',
+      "Emotion-based music generation",
+      "Real-time audio processing",
+      "Customizable genre blending",
     ],
-    projectLink: '#',
-    badge: '',
-    badgeColor: 'neon-cyan',
-    borderColor: 'neon-purple',
-    images: ['/img/thumb1.jpg', '/img/thumb2.jpg', '/img/thumb3.jpg'],
+    projectLink: "peterconlin.com",
+    badge: "",
+    badgeColor: "neon-cyan",
+    borderColor: "neon-purple",
+    images: [],
   },
 ];
 ---
 
 <section id="projects" class="py-24 relative overflow-hidden">
   <div class="absolute inset-0 cyber-grid opacity-20"></div>
-  <div class="absolute bottom-0 right-0 w-96 h-96 bg-neon-purple/10 rounded-full blur-3xl"></div>
+  <div
+    class="absolute bottom-0 right-0 w-96 h-96 bg-neon-purple/10 rounded-full blur-3xl"
+  >
+  </div>
 
-  <div 
+  <div
     class="max-w-7xl mx-auto px-4 relative"
     x-data={`{
       filter: 'all',
@@ -210,7 +241,9 @@ const projectsData: ProjectType[] = [
         <ColoredText text={headingData.title} wordsPerColor={1} />
       </h2>
       <div class="h-1 w-24 bg-neon-purple mx-auto mt-4"></div>
-      <p class="text-gray-300 max-w-3xl mx-auto mt-6">{headingData.description}</p>
+      <p class="text-gray-300 max-w-3xl mx-auto mt-6">
+        {headingData.description}
+      </p>
     </div>
 
     <!-- Project Filter -->
@@ -225,7 +258,10 @@ const projectsData: ProjectType[] = [
       >
         All
       </button>
-      <template x-for="category in [...new Set(projects.map(p => p.category))]" :key="category">
+      <template
+        x-for="category in [...new Set(projects.map(p => p.category))]"
+        :key="category"
+      >
         <button
           x-on:click="filter = category"
           class="px-5 py-2 max-sm:text-sm max-sm:py-1.5 max-sm:px-4 rounded-full border transition-all duration-300"
@@ -272,15 +308,22 @@ const projectsData: ProjectType[] = [
                 x-transition:enter-end="opacity-100"
                 class="absolute inset-0 bg-gradient-to-t from-dark-space via-dark-space/70 to-transparent flex flex-col justify-end p-6"
               >
-                <h3 class="text-xl font-bold text-neon-cyan mb-2" x-text="project.title"></h3>
-                <p class="text-gray-300 mb-4 text-sm" x-text="project.description"></p>
+                <h3
+                  class="text-xl font-bold text-neon-cyan mb-2"
+                  x-text="project.title"
+                >
+                </h3>
+                <p
+                  class="text-gray-300 mb-4 text-sm"
+                  x-text="project.description"
+                >
+                </p>
                 <div class="flex flex-wrap gap-2">
                   <template x-for="tech in project.technologies" :key="tech">
                     <span
                       class="text-xs px-2 py-1 rounded-full border"
                       x-bind:class="`bg-${project.badgeColor}/20 text-${project.badgeColor} border-${project.badgeColor}/50`"
-                      x-text="tech"
-                    ></span>
+                      x-text="tech"></span>
                   </template>
                 </div>
               </div>
@@ -288,7 +331,8 @@ const projectsData: ProjectType[] = [
                 x-show="project.badge"
                 class="absolute top-4 right-4 bg-dark-space/90 rounded-full px-3 py-1 text-xs border border-neon-cyan text-neon-cyan"
                 x-text="project.badge"
-              ></div>
+              >
+              </div>
             </div>
           </div>
           <div class="flex justify-between mt-4">
@@ -308,8 +352,7 @@ const projectsData: ProjectType[] = [
                 <path
                   fill-rule="evenodd"
                   d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                  clip-rule="evenodd"
-                />
+                  clip-rule="evenodd"></path>
               </svg>
             </a>
             <button
@@ -326,8 +369,7 @@ const projectsData: ProjectType[] = [
                 <path
                   fill-rule="evenodd"
                   d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2h-1V9a1 1 0 00-1-1H9z"
-                  clip-rule="evenodd"
-                />
+                  clip-rule="evenodd"></path>
               </svg>
             </button>
           </div>
@@ -345,7 +387,9 @@ const projectsData: ProjectType[] = [
       aria-modal="true"
       style="display:none;"
     >
-      <div class="flex items-center justify-center min-h-screen px-4 text-center sm:p-0">
+      <div
+        class="flex items-center justify-center min-h-screen px-4 text-center sm:p-0"
+      >
         <div
           x-on:click="closeModal()"
           x-show="activeProject !== null"
@@ -357,7 +401,8 @@ const projectsData: ProjectType[] = [
           x-transition:leave-end="opacity-0"
           class="fixed inset-0 bg-dark-space/80 transition-opacity"
           aria-hidden="true"
-        ></div>
+        >
+        </div>
         <div
           x-show="activeProject !== null"
           x-transition:enter="ease-out duration-300"
@@ -368,16 +413,22 @@ const projectsData: ProjectType[] = [
           x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
           class="inline-block w-full max-w-[98%] sm:max-w-4xl my-8 rounded-lg text-left overflow-hidden transform transition-all backdrop-blur-xl border border-neon-cyan/30"
         >
-          <div class="relative bg-dark-space/95 px-4 sm:px-6 pt-5 pb-4 sm:pb-6 max-h-[90vh] overflow-y-auto scrollbars">
-            <div class="relative" x-data="currentProject = getProject(activeProject)">
+          <div
+            class="relative bg-dark-space/95 px-4 sm:px-6 pt-5 pb-4 sm:pb-6 max-h-[90vh] overflow-y-auto scrollbars"
+          >
+            <div
+              class="relative"
+              x-data="currentProject = getProject(activeProject)"
+            >
               <div class="mt-3 sm:mt-0 text-left w-full">
                 <template x-if="currentProject = getProject(activeProject)">
                   <div>
-                    <h3 
+                    <h3
                       class="text-xl sm:text-2xl font-bold mb-4"
                       x-bind:class="`text-${currentProject.borderColor}`"
                       x-text="currentProject.title"
-                    ></h3>
+                    >
+                    </h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
                       <div>
                         <img
@@ -394,7 +445,10 @@ const projectsData: ProjectType[] = [
                             class="rounded border w-full h-auto object-cover cursor-pointer hover:opacity-80 transition-opacity duration-200"
                             x-bind:class="`border-${currentProject.borderColor}/30`"
                           />
-                          <template x-for="(thumb, index) in currentProject.images" :key="index">
+                          <template
+                            x-for="(thumb, index) in currentProject.images"
+                            :key="index"
+                          >
                             <img
                               x-on:click="selectedImage = thumb"
                               :src="thumb"
@@ -406,23 +460,42 @@ const projectsData: ProjectType[] = [
                         </div>
                       </div>
                       <div class="space-y-4 sm:space-y-6">
-                        <p class="text-gray-300 text-sm sm:text-base" x-text="currentProject.modalDescription"></p>
+                        <p
+                          class="text-gray-300 text-sm sm:text-base"
+                          x-text="currentProject.modalDescription"
+                        >
+                        </p>
                         <div class="space-y-2">
-                          <h4 class="text-neon-purple font-bold text-base sm:text-lg">Technologies</h4>
+                          <h4
+                            class="text-neon-purple font-bold text-base sm:text-lg"
+                          >
+                            Technologies
+                          </h4>
                           <div class="flex flex-wrap gap-2">
-                            <template x-for="tech in currentProject.technologies" :key="tech">
+                            <template
+                              x-for="tech in currentProject.technologies"
+                              :key="tech"
+                            >
                               <span
                                 class="text-xs px-2 py-1 rounded-full border"
                                 x-bind:class="`bg-${currentProject.badgeColor}/20 text-${currentProject.badgeColor} border-${currentProject.badgeColor}/50`"
-                                x-text="tech"
-                              ></span>
+                                x-text="tech"></span>
                             </template>
                           </div>
                         </div>
                         <div>
-                          <h4 class="text-neon-purple font-bold text-base sm:text-lg">Features</h4>
-                          <ul class="text-gray-300 list-disc list-inside text-sm sm:text-base">
-                            <template x-for="feature in currentProject.features" :key="feature">
+                          <h4
+                            class="text-neon-purple font-bold text-base sm:text-lg"
+                          >
+                            Features
+                          </h4>
+                          <ul
+                            class="text-gray-300 list-disc list-inside text-sm sm:text-base"
+                          >
+                            <template
+                              x-for="feature in currentProject.features"
+                              :key="feature"
+                            >
                               <li x-text="feature"></li>
                             </template>
                           </ul>
@@ -456,10 +529,8 @@ const projectsData: ProjectType[] = [
     </div>
 
     <!-- Load More Button -->
-    <div class="text-center mt-12">
-      <Button variant='outline' color='cyan'>
-        LOAD MORE PROJECTS
-      </Button>
-    </div>
+    <!-- <div class="text-center mt-12">
+      <Button variant="outline" color="cyan"> LOAD MORE PROJECTS </Button>
+    </div> -->
   </div>
 </section>

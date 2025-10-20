@@ -2,9 +2,10 @@
 
 ## TODO
 
-[[components/ProjectsSection.astro]]
-
-- [ ] Connect database
+PROJECTS
+-[ ] Add repo button to modal
+-[ ] Change neon-cyan to green in global CSS
+  -[ ] Update instances of neon-cyan to green
 
 [[about.astro]]
 
