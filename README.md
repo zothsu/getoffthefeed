@@ -2,7 +2,6 @@
 
 ## TODO
 
-
 Blog
 
 - [ ] Connect database with blog content
@@ -22,3 +21,7 @@ About
 - [ ] Refactor SVG for GH logo #29
 - [ ] Refactor SVG for LinkedIn logo #37
 - [ ] Add Fediverse Servers
+
+## Questions for future me
+
+- Do I want to have a contact page if I have it at the bottom of my front page lwith a button at the top as well? Feels like la contact page might be a little bit overkill.
