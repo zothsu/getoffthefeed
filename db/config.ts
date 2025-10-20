@@ -2,6 +2,9 @@ import { defineDb, defineTable, column } from 'astro:db';
 
 const Projects = defineTable({
   columns: {
+    featured: column.boolean({
+      default: false
+    }),
     id: column.number({ primaryKey: true }),
     title: column.text(),
     slug: column.text({ unique: true }),
