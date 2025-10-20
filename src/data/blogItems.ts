@@ -125,7 +125,7 @@ export const blogItems: BlogItem[] = [
     description:
       "Why I build immersive observability views with open tooling so operators and contributors share the same truth.",
     href: "/blogs/3d-web-experiences",
-    color: "neon-cyan",
+    color: "emerald-green",
     readTime: "8 min read",
     content: `
       <p>The best dashboards feel immersive: layered context, healthy contrast, and just enough motion to keep anomalies from hiding. "3D" now means Distributed, Decentralized, and Documented&mdash;the pillars I use to design operational views for the teams I work with.</p>
@@ -204,7 +204,7 @@ export const blogItems: BlogItem[] = [
     description:
       "What happens when indie shops, cooperatives, and creators plug ActivityPub into their storefronts and keep ownership of their data.",
     href: "/blogs/ar-ecommerce",
-    color: "neon-cyan",
+    color: "emerald-green",
     readTime: "6 min read",
     content: `
       <p>Imagine a storefront that still works if your payment processor drops you. ActivityPub gives indie sellers a way to stay connected to their customers without surrendering data or community ownership.</p>

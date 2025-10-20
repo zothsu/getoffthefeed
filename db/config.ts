@@ -6,7 +6,12 @@ const Projects = defineTable({
     title: column.text(),
     slug: column.text({ unique: true }),
     description: column.text(),
-    techStack: column.text(), // could also be JSON if you want an array
+    // Store tags as an array (Astro DB supports JSON)
+    techStack: column.json(),
+    image: column.text({
+      default:
+        "https://res.cloudinary.com/dzuh8njoq/image/upload/v1760918089/blog-placeholder-1_lxebwm.jpg",
+    }),
     url: column.text(),
     repo: column.text(),
     dateCreated: column.date(),
