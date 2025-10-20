@@ -2,15 +2,20 @@
 
 ## TODO
 
-Blog
+[[components/BlogPosts.astro]]
 
-- [ ] Connect database with blog content
+- [ ] Connect database
 
-About
+[[pages/]]
 
-- [ ] Add resume
+[[about.astro]]
 
-[[components/ContactSection.astro]]
+- [ ] Decide on SPA or click-through site
+
+[[contact.astro]]
+
+- [ ] Decide on SPA [[components/ContactSection.astro]]or click-through site [[pages/contact.astro]]+[[components/ContactUs]]
+
 
 - [ ] Submit contact information to [formspree](https://formspree.io/)
 - [ ] Update forms `action`
