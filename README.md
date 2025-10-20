@@ -2,11 +2,9 @@
 
 ## TODO
 
-[[components/BlogPosts.astro]]
+[[components/ProjectsSection.astro]]
 
 - [ ] Connect database
-
-[[pages/]]
 
 [[about.astro]]
 
