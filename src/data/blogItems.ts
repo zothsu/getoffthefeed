@@ -9,7 +9,7 @@ export interface BlogItem {
   title: string;
   description: string;
   href: string;
-  color: 'neon-cyan' | 'neon-purple';
+  color: 'emerald-green' | 'neon-purple';
   readTime: string;
   content: string; // HTML content for blog detail
   author: {
