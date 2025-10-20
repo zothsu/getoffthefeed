@@ -33,6 +33,11 @@
 
 - [ ] Decide on SPA [[components/ContactSection.astro]]or click-through site [[pages/contact.astro]]+[[components/ContactUs]]
 
+### Blog
+
+- Add Blog back onto main menu
+- Update blog photos
+
 ## Questions for future me
 
 - Do I want to have a contact page if I have it at the bottom of my front page with a button at the top as well? Feels like a contact page might be a little bit overkill..
