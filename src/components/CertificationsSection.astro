@@ -1,0 +1,116 @@
+---
+import ColoredText from "./ColoredText.astro";
+import CertificationCard from "./ui/CertificationCard.astro";
+
+export interface HeadingType {
+  subtitle: string;
+  title: string;
+  highlight: string;
+  description: string;
+}
+export interface Certification {
+  title: string;
+  description: string;
+  imageSrc: string; // URL for the top image
+  imageAlt?: string;
+  borderColor: "neon-cyan" | "neon-purple";
+  certDate?: string; // e.g. "June 2025"
+  features: string[];
+}
+
+// heading data
+const headingData: HeadingType = {
+  subtitle: "//CERTIFICATIONS",
+  title: "Digital Solutions Spectrum",
+  highlight: "Solutions",
+  description: " ",
+};
+
+const certificationsData: Certification[] = [
+  {
+    title: "Software Engineering Immersive Program",
+    description:
+      "Creating responsive, intuitive, and visually striking interfaces that blur the line between digital and reality using React, Vue, Three.js, and WebGL.",
+    imageSrc:
+      "https://res.cloudinary.com/dzuh8njoq/image/upload/v1760918580/certificate_GA2023_qhdm7o.png",
+    imageAlt: "Certification from GeneralAssembly",
+    features: [
+      "3D Interactive Experiences",
+      "Motion UI & Animations",
+      "Next-gen UI Frameworks",
+    ],
+    borderColor: "neon-cyan",
+    certDate: "March 2024",
+  },
+  {
+    title: "Advanced Backend Architecture",
+    description:
+      "Engineering robust, scalable server solutions using Node.js, Python, and cloud infrastructure designed for performance and security.",
+    imageSrc:
+      "https://res.cloudinary.com/dzuh8njoq/image/upload/v1760987589/freecodecamp.org_certification_zoe-moment_responsive-web-design_wpw2oc.png",
+    imageAlt:
+      "https://freecodecamp.org/certification/zoe-moment/responsive-web-design",
+    features: [
+      "Microcertifications Architecture",
+      "Real-time Data Processing",
+      "Serverless Functions",
+    ],
+    borderColor: "neon-purple",
+    certDate: "May 2022",
+  },
+  // {
+  //   title: "AI & Data Integration",
+  //   description:
+  //     "Harnessing the power of machine learning and data analytics to build intelligent applications that learn, adapt, and predict.",
+  //   imageSrc: "###",
+  //   imageAlt: "###",
+  //   features: [
+  //     "Chatbot Development",
+  //     "Video Generator AI",
+  //     "Image Generator AI",
+  //   ],
+  //   borderColor: "neon-cyan",
+  //   certDate: "###",
+  // },
+];
+---
+
+<section
+  id="certifications"
+  class="py-20 lg:py-24 bg-gradient-to-b from-dark-space to-dark-space/95 relative"
+>
+  <div class="absolute inset-0 cyber-grid opacity-50"></div>
+  <div
+    class="absolute left-0 bottom-0 w-96 h-96 bg-neon-cyan/5 rounded-full blur-3xl"
+  >
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 relative">
+    <div class="mb-16 text-center">
+      <span class="text-neon-purple font-code">{headingData.subtitle}</span>
+      <h2 class="text-4xl md:text-5xl font-bold mt-2">
+        <ColoredText text={headingData.title} wordsPerColor={1} />
+      </h2>
+      <div class="h-1 w-24 bg-neon-cyan mx-auto mt-4"></div>
+      <p class="text-gray-300 max-w-3xl mx-auto mt-6">
+        {headingData.description}
+      </p>
+    </div>
+
+    <div class="flex flex-col items-center gap-8">
+      {
+        certificationsData.map((certification) => (
+          <CertificationCard
+            title={certification.title}
+            description={certification.description}
+            imageSrc={certification.imageSrc}
+            imageAlt={certification.imageAlt}
+            features={certification.features}
+            borderColor={certification.borderColor}
+            certDate={certification.certDate}
+          />
+        ))
+      }
+    </div>
+  </div>
+</section>

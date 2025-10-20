@@ -2,21 +2,22 @@
 
 ## TODO
 
-PROJECTS
--[ ] Add repo button to modal
--[ ] Change neon-cyan to green in global CSS
-  -[ ] Update instances of neon-cyan to green
+- [ ] Decide between SPA or click-through site
 
-[[about.astro]]
+### Projects
 
-- [ ] Decide on SPA or click-through site
+- [ ] Add repo button to modal
+- [ ] Change neon-cyan to green in global CSS
+  - [ ] Update instances of `neon-cyan` to `green`
 
-[[contact.astro]]
+### Certifications
 
-- [ ] Decide on SPA [[components/ContactSection.astro]]or click-through site [[pages/contact.astro]]+[[components/ContactUs]]
+- [ ] Correct certification height (img)
 
+### Contact
 
-- [ ] Submit contact information to [formspree](https://formspree.io/)
+- [ ] **Submit contact information to [formspree](https://formspree.io/)**
+
 - [ ] Update forms `action`
 - [ ] Set the `name` attribute on each input tag
   - [ ] Name
@@ -26,6 +27,8 @@ PROJECTS
 - [ ] Refactor SVG for LinkedIn logo #37
 - [ ] Add Fediverse Servers
 
+- [ ] Decide on SPA [[components/ContactSection.astro]]or click-through site [[pages/contact.astro]]+[[components/ContactUs]]
+
 ## Questions for future me
 
-- Do I want to have a contact page if I have it at the bottom of my front page lwith a button at the top as well? Feels like la contact page might be a little bit overkill.
+- Do I want to have a contact page if I have it at the bottom of my front page with a button at the top as well? Feels like a contact page might be a little bit overkill..
