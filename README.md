@@ -1,7 +1,10 @@
 # README.md
 
+[Repo](https://github.com/zothsu/zthedev.com)
+
 ## TODO
 
+- [ ] Update favicon
 - [ ] Decide between SPA or click-through site
 
 ### Hero
