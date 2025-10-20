@@ -4,6 +4,10 @@
 
 - [ ] Decide between SPA or click-through site
 
+### Hero
+
+- [ ] Increase size of head img
+
 ### Projects
 
 - [ ] Add repo button to modal
