@@ -2,12 +2,12 @@
 import ColoredText from "../../components/ColoredText.astro";
 import AuthorCard from "../../components/ui/AuthorCard.astro";
 import ProjectCard from "../../components/ui/ProjectCard.astro";
-import { blogItems, type BlogItem } from "../../data/blogItems";
+import { projectItems, type Projects } from "../../../db/seed";
 import Layout from "../../layouts/PageLayout.astro";
 
 // Generate static paths for each blog post slug
 export async function getStaticPaths() {
-  return blogItems.map((post) => ({
+  return projectItems.map((post) => ({
     params: { slug: post.slug },
   }));
 }
