@@ -20,13 +20,12 @@ export default async function seed() {
       id: 2,
       title: "em.pdxhealth.services",
       slug: "em",
-      description:
-        "Official website for doula Emilie Young of Portland, OR.",
+      description: "Official website for doula Emilie Young of Portland, OR.",
       techStack: ["Static Site", "Accessibility", "Responsive Design"],
       // image uses default if not specified
       url: "https://em.pdxhealth.services",
-			repo: "https://github.com/zothsu/emilieYoung",
-			dateCreated: new Date("2024-01-01"),
+      repo: "https://github.com/zothsu/emilieYoung",
+      dateCreated: new Date("2024-01-01"),
     },
     {
       id: 3,
@@ -36,6 +35,7 @@ export default async function seed() {
         "A showcase of Peter Conlin’s work in cinematic design, game development, and environment art. The site features high-fidelity cinematic, immersive game environments, and storytelling-driven projects.",
       techStack: ["Static Site", "Portfolio", "Interactive Visuals"],
       url: "https://peterconlin.com",
+      dateCreated: new Date("2024-05-01"),
     },
     {
       id: 4,
@@ -45,6 +45,7 @@ export default async function seed() {
         "Redesign of a WordPress website, prioritizing SEO and accessibility optimization. This involved meticulous SEO adjustments, from keyword research to on-page optimization, alongside ensuring accessibility compliance according to WCAG standards.",
       techStack: ["WordPress", "SEO", "Accessibility", "Redesign"],
       url: "https://twosistersplaycafe.net",
+      dateCreated: new Date("2024-05-01"),
     },
     {
       id: 5,
@@ -54,6 +55,7 @@ export default async function seed() {
         "A clean, user-friendly website, designed for a local cake consultant, featuring an intuitive appointment scheduling system. The design highlights the consultant’s portfolio with high-quality images and detailed service descriptions, providing potential clients with an easy and seamless experience for navigating and booking consultations.",
       techStack: ["Static Site", "Scheduling", "Photography"],
       url: "https://cakemoments.art",
+      dateCreated: new Date("2024-05-01"),
     },
     {
       id: 6,
@@ -63,7 +65,8 @@ export default async function seed() {
         "This MERN stack CRUD app is designed to help users track the last time they sharpened their knives and the stones used for the sharpening. With the app, users can conveniently log their sharpening sessions, ensuring they never miss a scheduled maintenance.",
       techStack: ["MERN", "CRUD", "User Tracking"],
       url: "https://sharpeningtracker-38b3dbb8f407.herokuapp.com",
-      repo: "https://github.com/REPLACE_ME",  // replace with actual repo link
+      repo: "https://github.com/REPLACE_ME", // replace with actual repo link
+      dateCreated: new Date("2024-05-01"),
     },
     {
       id: 7,
@@ -74,6 +77,7 @@ export default async function seed() {
       techStack: ["MEN", "CRUD", "Note-Taking", "Neurodivergent Friendly"],
       url: "https://theneurospicycamper-9a6b944e5aa8.herokuapp.com",
       repo: "https://github.com/REPLACE_ME", // replace
+      dateCreated: new Date("2024-05-01"),
     },
     {
       id: 8,
@@ -84,6 +88,7 @@ export default async function seed() {
       techStack: ["Django", "CRUD", "Collaboration", "Home Decor"],
       url: "https://inspiremehomedecor-4f31de9a6a6e.herokuapp.com",
       repo: "https://github.com/REPLACE_ME", // replace
+      dateCreated: new Date("2024-05-01"),
     },
   ] as any);
 }

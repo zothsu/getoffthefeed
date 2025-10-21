@@ -16,7 +16,10 @@ const Projects = defineTable({
         "https://res.cloudinary.com/dzuh8njoq/image/upload/v1760918089/blog-placeholder-1_lxebwm.jpg",
     }),
     url: column.text(),
-    repo: column.text(),
+    repo: column.text({
+      default:
+        "https://github.com/zothsu"
+    }),
     dateCreated: column.date(),
   },
 });
