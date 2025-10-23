@@ -1,0 +1,12 @@
+---
+import { turso } from '../../turso'
+const { rows } = await turso.execute('SELECT * FROM projects')
+---
+
+<ul>
+  {rows.map((project) => ( 
+    <li>
+    {project.title}
+  </li>
+    ))}
+</ul>
