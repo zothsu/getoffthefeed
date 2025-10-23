@@ -1,6 +1,6 @@
 import { defineDb, defineTable, column } from 'astro:db';
 
-const Projects = defineTable({
+export const Projects = defineTable({
   columns: {
     featured: column.boolean({
       default: false

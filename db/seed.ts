@@ -1,8 +1,11 @@
-import { db, Projects} from 'astro:db';
+import { asDrizzleTable } from '@astrojs/db/utils';
+import { Projects } from './config';
+import { db } from 'astro:db';
 
 // https://astro.build/db/seed
 export default async function seed() {
-  await db.insert(Projects).values([
+  const typesafeProjects = asDrizzleTable('Projects', Projects);
+  await db.insert(typesafeProjects).values([
     {
       id: 1,
       title: "PNW Web Solutions",
