@@ -9,7 +9,7 @@ export interface BlogItem {
   title: string;
   description: string;
   href: string;
-  color: 'emerald-green' | 'neon-purple';
+  color: 'neon-purple' | 'neon-cyan';
   readTime: string;
   content: string; // HTML content for blog detail
   author: {
@@ -34,7 +34,7 @@ export const blogItems: BlogItem[] = [
     description:
       "Bridging the gap between development and operations isn't just about tools — it's about mindset. Here's why every developer benefits from thinking like an operator.",
     href: "/blogs/why-developers-should-think-like-operators",
-    color: "emerald-green",
+    color: "neon-cyan",
     readTime: "6 min read",
     content: `
       <p>We talk a lot about DevOps as a culture or a pipeline, but what it really comes down to is empathy. Developers who understand how their code behaves in production write better, more maintainable software. The same applies the other way around — operators who think like developers automate smarter and troubleshoot faster.</p>
@@ -125,7 +125,7 @@ export const blogItems: BlogItem[] = [
     description:
       "Why I build immersive observability views with open tooling so operators and contributors share the same truth.",
     href: "/blogs/3d-web-experiences",
-    color: "emerald-green",
+    color: "neon-cyan",
     readTime: "8 min read",
     content: `
       <p>The best dashboards feel immersive: layered context, healthy contrast, and just enough motion to keep anomalies from hiding. "3D" now means Distributed, Decentralized, and Documented&mdash;the pillars I use to design operational views for the teams I work with.</p>
@@ -204,7 +204,7 @@ export const blogItems: BlogItem[] = [
     description:
       "What happens when indie shops, cooperatives, and creators plug ActivityPub into their storefronts and keep ownership of their data.",
     href: "/blogs/ar-ecommerce",
-    color: "emerald-green",
+    color: "neon-cyan",
     readTime: "6 min read",
     content: `
       <p>Imagine a storefront that still works if your payment processor drops you. ActivityPub gives indie sellers a way to stay connected to their customers without surrendering data or community ownership.</p>
