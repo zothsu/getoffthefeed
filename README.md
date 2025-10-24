@@ -7,15 +7,19 @@
 - [ ] Update favicon
 - [ ] Decide between SPA or click-through site
 
+### CSS
+
+- [ ] Change neon-cyan to green in global CSS
+  - [ ] Update instances of `neon-cyan` to `green`
+
 ### Hero
 
 - [ ] Increase size of head img
+- [ ] Implement max-width for `ProfileCard`
 
 ### Projects
 
 - [ ] Add repo button to modal
-- [ ] Change neon-cyan to green in global CSS
-  - [ ] Update instances of `neon-cyan` to `green`
 
 ### Certifications
 
