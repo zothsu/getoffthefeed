@@ -27,7 +27,7 @@ const {
       : "border-neon-purple/30 hover:border-neon-purple hover:shadow-neon-purple/20"
   }`}
 >
-  <div class="flex gap-6 md:items-stretch">
+  <div class="grid grid-col gap-2">
     <div class="p-6 flex-1 text-left">
       <h3
         class={`text-xl font-bold mb-1 ${
@@ -76,7 +76,7 @@ const {
       <img
         src={imageSrc}
         alt={imageAlt ?? title}
-        class="object-cover"
+        class="object-contain"
       />
     </div>
   </div>
