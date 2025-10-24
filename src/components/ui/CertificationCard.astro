@@ -27,21 +27,112 @@ const {
       : "border-neon-purple/30 hover:border-neon-purple hover:shadow-neon-purple/20"
   }`}
 >
-  <div class="grid grid-col gap-2">
-    <div class="p-6 flex-1 text-left">
-      <h3
-        class={`text-xl font-bold mb-1 ${
-          borderColor === "neon-cyan" ? "text-neon-cyan" : "text-neon-purple"
-        }`}
-      >
-        {title}
-      </h3>
+  <div class="w-full md:flex-shrink-0">
+    <button
+      type="button"
+      class="w-full cursor-pointer transition-opacity hover:opacity-80"
+      data-modal-trigger={title.replace(/\s+/g, "-").toLowerCase()}
+    >
+      <div class="grid grid-col gap-2">
+        <div class="p-6 flex-1 text-left">
+          <h3
+            class={`text-xl font-bold mb-1 ${
+              borderColor === "neon-cyan"
+                ? "text-neon-cyan"
+                : "text-neon-purple"
+            }`}
+          >
+            {title}
+          </h3>
 
-      {
-        certDate && (
-          <div class="text-sm text-gray-200 mb-3">Certified: {certDate}</div>
-        )
-      }
+          {
+            certDate && (
+              <div class="text-sm text-gray-200 mb-3">
+                Certified: {certDate}
+              </div>
+            )
+          }
+
+          <p class="text-gray-100 mb-4">{description}</p>
+
+          <ul class="space-y-2 text-gray-300">
+            {
+              features.map((feature: string) => (
+                <li class="flex items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class={`h-4 w-4 mr-2 ${
+                      borderColor === "neon-cyan"
+                        ? "text-neon-purple"
+                        : "text-neon-cyan"
+                    }`}
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  {feature}
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+      </div>
+    </button>
+  </div>
+</div>
+
+<!-- Modal -->
+<div
+  id={`modal-${title.replace(/\s+/g, "-").toLowerCase()}`}
+  class="modal fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden items-center justify-center p-4"
+  data-modal
+>
+  <div
+    class={`bg-dark-space rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto border-2 ${
+      borderColor === "neon-cyan"
+        ? "border-neon-cyan shadow-lg shadow-neon-cyan/20"
+        : "border-neon-purple shadow-lg shadow-neon-purple/20"
+    }`}
+  >
+    <div class="p-6">
+      <div class="flex justify-between items-start mb-4">
+        <h2
+          class={`text-2xl font-bold ${
+            borderColor === "neon-cyan" ? "text-neon-cyan" : "text-neon-purple"
+          }`}
+        >
+          {title}
+        </h2>
+        <button
+          type="button"
+          class="text-gray-400 hover:text-white transition-colors"
+          data-modal-close
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+      <img
+        src={imageSrc}
+        alt={imageAlt ?? title}
+        class="w-full rounded-lg mb-4"
+      />
 
       <p class="text-gray-100 mb-4">{description}</p>
 
@@ -71,13 +162,36 @@ const {
         }
       </ul>
     </div>
-
-    <div class=" w-full md:flex-shrink-0">
-      <img
-        src={imageSrc}
-        alt={imageAlt ?? title}
-        class="object-contain"
-      />
-    </div>
   </div>
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const triggers = document.querySelectorAll("[data-modal-trigger]");
+
+    triggers.forEach((trigger) => {
+      const modalId = `modal-${trigger.getAttribute("data-modal-trigger")}`;
+      const modal = document.getElementById(modalId);
+
+      if (modal) {
+        trigger.addEventListener("click", () => {
+          modal.classList.remove("hidden");
+          modal.classList.add("flex");
+        });
+
+        const closeBtn = modal.querySelector("[data-modal-close]");
+        closeBtn?.addEventListener("click", () => {
+          modal.classList.add("hidden");
+          modal.classList.remove("flex");
+        });
+
+        modal.addEventListener("click", (e) => {
+          if (e.target === modal) {
+            modal.classList.add("hidden");
+            modal.classList.remove("flex");
+          }
+        });
+      }
+    });
+  });
+</script>
